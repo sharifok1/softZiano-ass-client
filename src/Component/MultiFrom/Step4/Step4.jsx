@@ -50,16 +50,11 @@ useEffect(() => {
             <form onChange={handleSubmit(onSubmit)}>
                 <p>Amount BDT</p> <br />
                 <p className='taka-sym'>৳</p>
-                <input type='Number' {...register("amount")} 
+                <input type='Number' {...register("amount",{maxLength: 8})} 
                 className='input-field amaount'  
-              placeholder="Amount"
-              inputProps={{
-                maxLength: 8,
-                step: '.01'
-              }}
-            //   variant="outlined" 
-                
-                
+                placeholder="Amount"
+                required
+                value={items.amount}
                 /> <br /> <br />
             </form>
             </div>

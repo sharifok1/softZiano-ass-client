@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Step7 = () => {
-    
+    const randomNumber = Math.floor(1000000000 + Math.random() * 900000000);
     return (
         <div>
              <div className='appbar'>
@@ -13,7 +13,7 @@ const Step7 = () => {
             <div className='from-wraper'>
            <div>
             <p> Thank you!</p>		
-            <p>Your reservation ID is: 1234567890	</p> 		
+            <p>Your reservation ID is: {randomNumber}</p> 		
           </div> 
           </div>
           </div>

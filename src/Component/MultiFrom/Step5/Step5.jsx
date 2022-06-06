@@ -52,8 +52,9 @@ useEffect(() => {
                 <textarea className='note-input' type='text' {...register("note")} 
                 style={{backgroundColor:'transparent'}}
                 value={items.note}
+                required
                 defaultValue={`
-,'"" ./\\=?!:;
+,'"" ./\=?!:;
  "",""a"",""b""
 ヲンヰヱヴーヾ・
 ｧｰｭｿﾏﾞﾟ

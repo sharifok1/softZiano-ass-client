@@ -33,7 +33,7 @@ const Step1 = () => {
                 <div className='from-wraper'>
                 <form onChange={handleSubmit(onSubmit)}>
                     <p>Name</p> <br />
-                    <input {...register("name")} placeholder="name" defaultValue={items.name} className='input-field'/> <br /> <br />
+                    <input {...register("name",{ required: true})} placeholder="name" defaultValue={items.name} className='input-field' required/> <br /> <br />
                     <p>Gender</p>
                       <div style={{marginLeft:'60px'}}>
                            <input {...register("gender")} type="radio" value="Male" checked={items.gender === "Male"? true:false} id='radio1'/> <span><label htmlFor="radio1">Male</label></span> <br />

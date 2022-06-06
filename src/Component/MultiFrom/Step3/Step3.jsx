@@ -54,9 +54,9 @@ useEffect(() => {
             <div className='from-wraper'>
             <form onChange={handleSubmit(onSubmit)}>
                 <p>Date</p> <br />
-                <input className='input-field' type='date' {...register("date")} defaultValue={formatDate} value={items.date}/> <br /> <br />
+                <input className='input-field' type='date' {...register("date")} defaultValue={formatDate} value={items.date} required/> <br /> <br />
                 <p>Time</p> <br />
-                <input className='input-field' type='time' {...register("time")} defaultValue={times} value={items.time} /> <br /> <br />
+                <input className='input-field' type='time' {...register("time")} defaultValue={times} value={items.time} required/> <br /> <br />
             </form>
             </div>
               <div className='btn-next-back'>

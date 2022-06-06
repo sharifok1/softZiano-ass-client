@@ -53,7 +53,7 @@ useEffect(() => {
             <form onChange={handleSubmit(onSubmit)}>
                <p>From</p>
 
-                <select onChange={(e)=>setFormValue(e.target.value)} {...register("from")} className="select-field" value={items.from}>
+                <select onChange={(e)=>setFormValue(e.target.value)} {...register("from")} className="select-field" value={items.from} required>
                     <option value="">Plese Select the Location</option>
                     <option value="東京">東京</option>
                     <option value="横浜">横浜</option>
@@ -62,7 +62,7 @@ useEffect(() => {
                 </select>
 
                <p style={{marginTop:'20px'}}>To</p>
-                <select {...register("to")} className="select-field" value={items.to}>
+                <select {...register("to")} className="select-field" value={items.to} required>
                      <option value="">Plese Select the Location</option>
                      <option value="東京" disabled = {formValue === "東京"? true:false }>東京</option>
                     <option value="横浜" disabled = {formValue === "横浜"? true:false }>横浜</option>

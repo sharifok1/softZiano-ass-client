@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 const Step6 = () => {
     const [items, setItems] = useState([]);
     const [road, setRoad]=useState('')
-    const [msg, setMsg]=useState('')
+    // const [msg, setMsg]=useState('')
     const [storeData, setStoreData]=useState([])
     // get items from local storage//
 useEffect(() => {
@@ -17,7 +17,7 @@ useEffect(() => {
 const newName = items.name;
 
 useEffect(()=>{
-    const url =  `http://localhost:5000/ticketInfo`
+    const url =  `https://softtrainticket.herokuapp.com/ticketInfo`
     fetch(url)
     .then(res=> res.json())
     .then(data =>  setStoreData(data))
@@ -37,7 +37,7 @@ const sortName = storeData?.find((existsName)=>existsName.name === newName);
     console.log(road)
 
 const submitHandler = items => {
-    const url  = 'http://localhost:5000/ticketInfo'
+    const url  = 'https://softtrainticket.herokuapp.com/ticketInfo'
     fetch(url, {
       method:'POST',
       headers:{
@@ -47,14 +47,15 @@ const submitHandler = items => {
     })
     .then(res=>{
       if(res.status === 200){
-        setMsg('Product successfully added');
+        alert("Ticke Successfully issued")
+        // setMsg('Product successfully added');
         // window.localStorage.clear();
       } 
 
     })
  window.localStorage.clear();
   }
-  console.log(msg)
+
 
 
     return (
