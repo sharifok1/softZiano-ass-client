@@ -9,6 +9,7 @@
  - React
  - React hook froms
  - React router dom 6
+ - Heroku
 
  Bug:
  1. select option (from and to) both field take same text, if select any option on from , it should not take the same value on to. I do for this requirment . But its not working 
